@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { HttpClientModule } from '@angular/common/http';
 
 import { RoutingModule } from './app.route';
@@ -7,7 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './_pages/home/home.component';
 import { NotFoundPageComponent } from './_pages/not-found-page/not-found-page.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { AuthComponent } from './auth/auth.component';
+import { AuthComponent } from './components/auth/auth.component';
 import { WebService } from './services/web-services.service';
 
 
@@ -17,11 +19,14 @@ import { WebService } from './services/web-services.service';
     HomeComponent,
     NotFoundPageComponent,
     SidebarComponent,
-    AuthComponent
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
     RoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+
     HttpClientModule
   ],
   providers: [WebService],

@@ -1,0 +1,21 @@
+<input type="text" [(ngModel)]="name">
+
+<select [(ngModel)]="gender">
+  <option value="Man">
+    Man
+  </option>
+  <option value="Woman">
+    Woman
+  </option>
+  <option value="Transgender">
+    Transgender
+  </option>
+</select>
+
+<select [(ngModel)]="age">
+  <option *ngFor="let age of ages" value="{{age}}">
+    {{age}}
+  </option>
+</select>
+
+<button (click)="doLogin()">Sign in</button>

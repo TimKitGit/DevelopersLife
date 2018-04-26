@@ -1,5 +1,9 @@
-import { Component, OnInit, AfterViewInit, PipeTransform } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { AppComponent } from '../../app.component';
+import { Router } from '@angular/router';
+import { UserModel } from '../../_modeles/user';
+import { WebService } from '../../services/web-services.service';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-home',
@@ -8,15 +12,17 @@ import { AppComponent } from '../../app.component';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   title: string;
-  openSidebar: HTMLElement;
-  closeSidebar: HTMLElement;
+  webServiceSubscribe: Subscription;
+  name: string;
+  sidebar: HTMLElement;
   openedSedibar: boolean;
 
-  constructor(private defApp: AppComponent) {
+  constructor(private defApp: AppComponent, private router: Router) {
     this.title = this.defApp.title;
   }
 
   ngOnInit() {
+    this.sidebar = document.getElementById('sidebar');
     this.topFunction();
     this.onScroll();
   }
@@ -29,10 +35,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       document.getElementById('openSidebar').classList.toggle('open');
     }, 100);
-    document.getElementById('sidebar').style.width = '250px';
-    document.getElementById('sidebar').style.overflow = 'overlay';
+    this.sidebar.style.width = '250px';
+    this.sidebar.style.overflow = 'overlay';
     document.getElementById('main').style.marginLeft = '250px';
-    // document.body.style.backgroundColor = 'rgba(0,0,0,0.4)';
   }
 
   closeNav() {
@@ -40,18 +45,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       document.getElementById('openSidebar').classList.toggle('open');
     }, 100);
-    document.getElementById('sidebar').style.width = '7px';
-    document.getElementById('sidebar').style.overflow = 'hidden';
+    this.sidebar.style.width = '7px';
+    this.sidebar.scrollTop = 0;
+    this.sidebar.style.overflow = 'hidden';
     document.getElementById('main').style.marginLeft = '0';
-    // document.body.style.backgroundColor = '#fafafa';
   }
 
   onScroll() {
     window.onscroll = function () {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById('topToScrollButton').style.top = '-15px'; // .display = 'block';
+        document.getElementById('topToScrollButton').style.top = '-15px';
       } else {
-        document.getElementById('topToScrollButton').style.top = '150px'; // .display = 'none';
+        document.getElementById('topToScrollButton').style.top = '150px';
       }
     };
   }
@@ -64,12 +69,3 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 }
 
-class MyPipe implements PipeTransform {
-  transform(value, param) {
-    if (param === 'openNav()') {
-      return 'closeNav()';
-    } else {
-      return 'openNav()';
-    }
-  }
-}
