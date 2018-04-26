@@ -1,0 +1,217 @@
+<div class="header">
+  <img class="logo" src='../../../assets/icon.png' alt='LOGO'>
+  <!-- ../../../favicon.ico -->
+  <h3 class="title">Welcome to {{title}}</h3>
+</div>
+<div class="headerActive">
+  <button *ngIf="!openedSedibar" id="openSidebar" class="open" (click)="openNav()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <button *ngIf="openedSedibar" id="openSidebar" (click)="closeNav()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</div>
+
+<router-outlet></router-outlet>
+
+<div class="content">
+
+  <div class="postCard">
+    <div class="cardContent">
+      <div class="cardImage">
+        <img src="https://cdn.dribbble.com/users/1711908/screenshots/4515415/404paperpillar2.gif" alt="Image..." />
+      </div>
+      <h4 class="postInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error est ducimus, praesentium quisquam illum ipsum!</h4>
+      <div class="cardAction">
+        <div>
+          <button>
+            <i class="material-icons">bookmark_border</i>
+          </button>
+          <!-- <button>
+            <i class="material-icons">bookmark</i>
+          </button> -->
+          <button>
+            <i class="material-icons">more_horiz</i>
+          </button>
+        </div>
+        <div>
+          <button style="color: #62009b;">
+            <i class="material-icons">remove_red_eye</i>
+            <i>37</i>
+          </button>
+          <button>
+            <i class="material-icons">share</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="postCard">
+    <div class="cardContent">
+      <div class="cardImage">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/29bd6417998561.5635a605ad357.png" alt="Image..." />
+      </div>
+      <h4 class="postInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error est ducimus, praesentium quisquam illum ipsum!</h4>
+      <div class="cardAction">
+        <div>
+          <!-- <button>
+            <i class="material-icons">bookmark_border</i>
+          </button> -->
+          <button style="color: #f39a00">
+            <i class="material-icons">bookmark</i>
+          </button>
+          <button>
+            <i class="material-icons">more_horiz</i>
+          </button>
+        </div>
+        <div>
+          <button>
+            <i class="material-icons">remove_red_eye</i>
+            <i>5</i>
+          </button>
+          <button>
+            <i class="material-icons">share</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="postCard">
+    <div class="cardContent">
+      <div class="cardImage">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/29dd2a17998561.5635a605bf76c.png" alt="Image..." />
+      </div>
+      <h4 class="postInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error est ducimus, praesentium quisquam illum ipsum!</h4>
+      <div class="cardAction">
+        <div>
+          <button>
+            <i class="material-icons">bookmark_border</i>
+          </button>
+          <!-- <button>
+                <i class="material-icons">bookmark</i>
+              </button> -->
+          <button>
+            <i class="material-icons">more_horiz</i>
+          </button>
+        </div>
+        <div>
+          <button>
+            <i class="material-icons">remove_red_eye</i>
+            <i>12</i>
+          </button>
+          <button>
+            <i class="material-icons">share</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="postCard">
+    <div class="cardContent">
+      <div class="cardImage">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/4134a417998561.5635a605c6ed2.png" alt="Image..." />
+      </div>
+      <h4 class="postInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error est ducimus, praesentium quisquam illum ipsum!</h4>
+      <div class="cardAction">
+        <div>
+          <button>
+            <i class="material-icons">bookmark_border</i>
+          </button>
+          <!-- <button>
+                  <i class="material-icons">bookmark</i>
+                </button> -->
+          <button>
+            <i class="material-icons">more_horiz</i>
+          </button>
+        </div>
+        <div>
+          <button>
+            <i class="material-icons">remove_red_eye</i>
+            <i>12</i>
+          </button>
+          <button>
+            <i class="material-icons">share</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="postCard">
+    <div class="cardContent">
+      <div class="cardImage">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/5508a017998561.5635a605cd904.png" alt="Image..." />
+      </div>
+      <h4 class="postInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error est ducimus, praesentium quisquam illum ipsum!</h4>
+      <div class="cardAction">
+        <div>
+          <button>
+            <i class="material-icons">bookmark_border</i>
+          </button>
+          <!-- <button>
+                    <i class="material-icons">bookmark</i>
+                  </button> -->
+          <button>
+            <i class="material-icons">more_horiz</i>
+          </button>
+        </div>
+        <div>
+          <button>
+            <i class="material-icons">remove_red_eye</i>
+            <i>12</i>
+          </button>
+          <button>
+            <i class="material-icons">share</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="postCard">
+    <div class="cardContent">
+      <div class="cardImage">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/7d244617998561.5635a605e3323.png" alt="Image..." />
+      </div>
+      <h4 class="postInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error est ducimus, praesentium quisquam illum ipsum!</h4>
+      <div class="cardAction">
+        <div>
+          <button>
+            <i class="material-icons">bookmark_border</i>
+          </button>
+          <!-- <button>
+                      <i class="material-icons">bookmark</i>
+                    </button> -->
+          <button>
+            <i class="material-icons">more_horiz</i>
+          </button>
+        </div>
+        <div>
+          <button>
+            <i class="material-icons">remove_red_eye</i>
+            <i>12</i>
+          </button>
+          <button>
+            <i class="material-icons">share</i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footerActive">
+  <button class="topToScrollButton" id="topToScrollButton" (click)="topFunction()">
+    <i class="material-icons">arrow_upward</i>
+  </button>
+</div>
+<div class="footer">
+</div>

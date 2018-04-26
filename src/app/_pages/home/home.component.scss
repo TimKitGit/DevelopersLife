@@ -1,0 +1,209 @@
+@import '../../../_globalComponent.scss';
+
+.header {
+    @include header;
+    .title {
+        @include title;
+    }
+    .logo {
+        max-width: 50px;
+        @include spinner;
+    }
+}
+.headerActive {
+    @include stickyTopPosition;
+    width: 100%;
+    height: 50px;
+    background-color: $dark;
+    z-index: 3000;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 30px;
+    min-height: 1080px;
+    .postCard{
+        width: 300px;
+        height: 350px;
+        margin: 20px;
+        min-width: 255px;
+        background-color: white;
+        transition: $transistTime;
+        .cardContent {
+            position: relative;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            border: 1px solid $base;
+            border-radius: 3px;
+            overflow: hidden;
+            transition: $transistTime;
+            &:hover {
+                position: relative;
+                top: -5px;
+                box-shadow: 0 10px 35px 0 $base;
+                    .postInfo {
+                      color: $light-gray;
+                      background-color: $dark;
+                    &:after {
+                      content: ' >>>';
+                      color: $primary;
+                      transition: $transistTime;
+                    }
+                }
+            }
+            // &:active {
+            //     position: relative;
+            //     top: -2px;
+            //     box-shadow: 0 5px 15px 0 $light-gray;
+            //     transition: $transistTime;
+            // }
+            .cardImage {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                min-height: 50%;
+                max-height: 50%;
+                background-color: $primary;
+                border-bottom: 1px solid $light-gray;
+                img {
+                    max-width: 100%;
+                }
+            }
+            .postInfo {
+                height: 30%;
+                margin: 0;
+                padding: 15px;
+                background-color: white;
+                transition: $transistTime;
+                z-index: 1000;
+                &:hover {
+                    cursor: pointer;
+                }
+                &:after {
+                  content: ' >>';
+                  color: white;
+                  transition: $transistTime;
+                }
+            }
+            .cardAction {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-height: 20%;
+                width: 100%;
+                height: 60px;
+                border-top: 1px solid $light-gray;
+                div{
+                    padding: 10px;
+                    button{
+                        outline: none;
+                        border: none;
+                        background-color: $clear;
+                        box-shadow: none;
+                        &:hover {
+                            cursor: pointer;
+                            color: $permission;
+                            transition: $transistTime;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .postCard + .postCard {
+        .cardContent{
+            border: 1px solid $light-gray;
+            &:hover {
+                box-shadow: 0 10px 35px 0 $light-gray;
+            }
+        }
+    }
+}
+
+.topToScrollButton {
+    @include diamondButton;
+    position: relative;
+    top: 150px;
+    margin: 5px;
+    transition: $transistTime;
+}
+.footerActive {
+    @include stickyBottomPosition;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: $dark;
+    z-index: 2500;
+}
+.footer {
+   @include footer;
+}
+
+
+#openSidebar {
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: $transistTime;
+  cursor: pointer;
+}
+
+#openSidebar span {
+  display: block;
+  left: 10px;
+  height: 5px;
+  width: 30px;
+  margin-bottom: 3px;
+  background: $primary;
+  border-radius: 5px;
+  opacity: 1;
+  transform: rotate(0deg);
+  transition: $transistTime;
+}
+
+#openSidebar span:nth-child(1) {
+    position: absolute;
+    top: 10px;
+}
+
+#openSidebar span:nth-child(2) {
+    position: absolute;
+    top: 20px;
+}
+
+#openSidebar span:nth-child(3) {
+    position: absolute;
+    top: 30px;
+}
+
+#openSidebar.open span:nth-child(1) {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    transform: rotate(135deg);
+}
+
+#openSidebar.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+#openSidebar.open span:nth-child(3) {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    transform: rotate(-135deg);
+}

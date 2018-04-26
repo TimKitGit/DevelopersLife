@@ -1,0 +1,24 @@
+@import './_globalComponent.scss';
+
+* {
+    scroll-behavior: smooth;
+    outline: none;
+    border: none;
+    background-color: $clear;
+    box-shadow: none;
+    
+    #main {
+        transition: $transistTime;
+        padding: 0;
+    }
+}
+
+html {
+    
+    overflow: overlay;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #fafafa;
+}

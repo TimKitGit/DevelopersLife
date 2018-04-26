@@ -1,0 +1,41 @@
+@import '../../../_globalComponent.scss';
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 7px; 
+    height: 100%;
+    background-color: $dark;
+    overflow: hidden;
+    padding-top: 0;
+    transition: $transistTime;
+    z-index: 5000;
+    .sideHeader {
+        position: relative;
+        right: 7px;
+        width: 100%;
+        height: 150px; 
+        background-color: $base;
+    }
+    .sideContent {
+        position: relative;
+        right: 7px;
+        width: 100%;
+        height: 100%;
+        background-color: $light-gray;
+        overflow: auto;
+    }
+    .sideFooter {
+        position: relative;
+        right: 7px;
+        width: 100%;
+        height: 250px; 
+        background-color: $light-dark;
+    }
+}
+
+@media screen and (max-height: 450px) {
+
+}

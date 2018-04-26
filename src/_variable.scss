@@ -1,0 +1,51 @@
+// colors -->>
+$colors: (
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+);
+
+$base: #55acee;
+$primary: #488aff;
+$secondary: #f39a00;
+$permission:  #32db64;
+$success: #00abab;
+$danger: #f53d3d;
+$dark:  #222; // #39444e;
+$light-dark: #808080;
+$light-gray: #dbdbdb;
+$light: #f6f6f6;
+$contrast: #ffffff;
+$clear: #ffffff00;
+// <<-- colors
+
+// variable -->>
+$transistTime: 0.3s ease-in-out;
+
+// <<-- variable
+
+// position -->>
+@mixin fixedTopPosition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+@mixin fixedBottomPosition {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@mixin stickyTopPosition {
+    position: sticky;
+    top: 0;
+}
+
+@mixin stickyBottomPosition {
+    position: sticky;
+    bottom: 0;
+}
+// <<-- position
